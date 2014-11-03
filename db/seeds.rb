@@ -93,14 +93,14 @@ end
 #add votes to questions
 User.all.each do |user|
 	user.questions.each do |question|
-		question.votes.create( is_upvote: true )
+		question.votes.create( is_upvote: true, user_id: rand(20)+1 )
 	end
 end
 
 #add votes to comments
 User.all.each do |user|
 	user.comments.each do |comment|
-		comment.votes.create( is_upvote: true )
+		comment.votes.create( is_upvote: true, user_id: rand(20)+1 )
 	end
 end
 

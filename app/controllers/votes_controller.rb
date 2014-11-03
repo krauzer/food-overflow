@@ -21,7 +21,6 @@ class VotesController < ApplicationController
 
   def set_vote
     @vote ||= Vote.find(params[:id])
-    p upvote_param
     if @vote.is_upvote == upvote_param[:is_upvote]
       @vote.is_upvote = nil
     else
